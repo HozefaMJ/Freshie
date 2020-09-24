@@ -19,7 +19,11 @@ app.use(bodyParser.json())
 const db = require("./config/keys").mongoURI;
 
 // MongoDB Middleware
-mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true }).then(()=> console.log('MongoDB Connected')).catch((err)=> console.log(err))
+mongoose.connect(db, 
+    { useNewUrlParser: true,
+      useUnifiedTopology: true })
+      .then(()=> console.log('MongoDB Connected'))
+      .catch((err)=> console.log(err))
 
 
 // The Only Route.
